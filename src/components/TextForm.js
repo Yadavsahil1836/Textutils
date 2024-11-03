@@ -58,8 +58,8 @@ export default function TextForm(formdata) {
     <div className="container" style={{color: formdata.mode === 'light' ? 'black' : 'white'}}>
 
     <h1 className='my-3'>Your Text Summarty</h1>
-    <p>{text.split(" ").filter((element)=>{return element.length!==0}).length} words and {text.length} characters</p>
-    <p>{0.008 * text.split(" ").filter((element)=>{return element.length!==0}).length} Minutes to read</p>
+    <p>{text.split(/\s+/).filter((element)=>{return element.length!==0}).length} words and {text.length} characters</p>
+    <p>{0.008 * text.split(/\s+/).filter((element)=>{return element.length!==0}).length} Minutes to read</p>
     <h2>
       Preview
     </h2>
